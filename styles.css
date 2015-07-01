@@ -1,4 +1,12 @@
 .tbutton {
-  border: 1px solid gray;
+  border: 1px solid black;
   border-radius:5px;
+  background-color: gray; 
+  position: relative;
+  opacity: .7;
+  width:20px;
+  height:10px;
+  border-radius:5px;
+  padding: 5px 5px 5px 5px;
+  z-index: 10;
 }
