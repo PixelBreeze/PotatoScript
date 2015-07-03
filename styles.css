@@ -13,6 +13,6 @@
 #potatoimg {
     width: 40px; /* you can use % */
     position:absolute;
-    top:50px;
-    left:50px;
+    top: auto;
+    left:auto;
 }
