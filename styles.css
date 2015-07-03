@@ -12,6 +12,7 @@
 }
 #potatoimg {
     width: 40px; /* you can use % */
-    height: auto;
-    margin: auto auto auto auto;
+    position:absolute;
+    top:50px;
+    left:50px;
 }
