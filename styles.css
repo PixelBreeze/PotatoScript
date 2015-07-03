@@ -10,3 +10,7 @@
     border-radius: 5px;
     cursor:move;
 }
+#potatoimg {
+    width: 40px; /* you can use % */
+    height: auto;
+}
