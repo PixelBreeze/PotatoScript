@@ -8,6 +8,7 @@
     border-radius: 5px;
     cursor:move;
     position: relative;
+    margin-top:55px;
 }
 #potatoimg {
     width: 40px; /* you can use % */
