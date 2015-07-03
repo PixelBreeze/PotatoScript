@@ -8,18 +8,16 @@ $("#tbutton").draggable(); });
 //Expands the button //SECOND PART
 var next_move = "expand";
 $(document).ready(function (){
-$(".panel").click(function(){
+$("#tbutton").click(function(){
     var css = {};
     if (next_move == "expand"){
         css = {
-            width: '300px',
-            height: '300px'
+            width: '200px'
         };
         next_move = "shrink";
     } else {
         css = {
-            width: '152px',
-            height: '152px'
+            width: '50px'
         };  
         next_move = "expand";
     }
