@@ -5,10 +5,10 @@ $('head').append('<link rel="stylesheet" href="https://rawgit.com/PixelBreeze/Po
 $.getScript('https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js').done(function(data){
 $('body').append('<div id="tbutton"><img id="potatoimg" src="http://pngimg.com/upload/potato_PNG7078.png"/></div>');
 $("#tbutton").draggable(); });
+
 //Expands the button //SECOND PART
 var next_move = "expand";
-$(document).ready(function (){
-$("#tbutton").click(function(){
+$("#tbutton").click(function (){
     var css = {};
     if (next_move == "expand"){
         css = {
@@ -22,5 +22,4 @@ $("#tbutton").click(function(){
         next_move = "expand";
     }
     $(this).animate(css, 200);
-});
 });
