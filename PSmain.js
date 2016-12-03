@@ -7,7 +7,7 @@ $.getScript('https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.
     $('#tbutton').append('<div id="pcbox" style="display: none;"><div id="pgot" class="pibox">Got</div><div id="pbltheme" class="pibox">BL Theme</div><div id="pbljunk" class="pibox">BL Junk</div><div id="pskip" class="pibox">Skip</div><div id="preload" class="pibox">Reload</div><div id="pafk" class="pibox">AFK</div><div id="pluul" class="pibox">:luul:</div></div>');
     $('#tbutton').draggable();
     
-    $("#phbox").click(function() {
+    $("#tbutton").click(function() {
         var css = {};
         var next_move = "expand";
         if (this.next_move == "expand") {
@@ -19,10 +19,10 @@ $.getScript('https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.
         }
         $(this).animate(css, 273);
     });   
-  /*
     $("#phbox").click(function(){
         $("#pcbox").toggle();  
-    });   
+    }); 
+   /*
     $("#pgot").click(function(){
         API.sendChat('I got it.'); 
     });
