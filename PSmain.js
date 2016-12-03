@@ -19,7 +19,7 @@ $.getScript('https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.
         }
         $(this).animate(css, 273);
     });   
-    $("#phbox").click(function(){
+    $("#potatoimg").click(function(){
         $("#pcbox").toggle();  
     }); 
    /*
