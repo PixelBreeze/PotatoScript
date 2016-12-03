@@ -32,6 +32,8 @@
     border-color: #6900ff;
     border-style: solid;
     border-width: 2px;
+    left: -2px;
+    position: absolute;
 }
 .pibox {
     width: 90px;
@@ -43,5 +45,4 @@
     float: left;
     text-align: center;
     line-height: 50px;
-}
 }
