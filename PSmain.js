@@ -19,6 +19,7 @@ $.getScript('https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.
         }
         $(this).animate(css, 200);
     });   
+  /*
     $("#phbox").click(function(){
         $("#pcbox").toggle();  
     });   
@@ -42,6 +43,6 @@ $.getScript('https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.
     });
     $("#pluul").click(function(){
         API.sendChat(':luul:'); 
-    });
+    }); */
 });
 
