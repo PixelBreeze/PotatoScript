@@ -4,11 +4,11 @@
 #tbutton {
     height: 50px;
     width: 50px;
-    border-color: #6900ff;
     background-color: rgba(45, 27, 97, 0.8) !important;
-    border-style: solid;
-    border-width:2px;
-    border-radius: 3px;
+    border-color: #6900ff;
+    border-left: 2px solid #6900ff;
+    border-right: 2px solid #6900ff;
+    border-top: 2px solid #6900ff;
     cursor:move;
     position: relative;
     margin-top:55px;
@@ -22,6 +22,8 @@
     right: 0;
     bottom: 0;
 }
+#phbox {
+    height: 50px;
 #pcbox {
     width: 273px;
     height: 204px;
@@ -29,7 +31,6 @@
     border-color: #6900ff;
     border-style: solid;
     border-width: 2px;
-    border-radius: 3px; 
 }
 .pibox {
     width: 90px;
