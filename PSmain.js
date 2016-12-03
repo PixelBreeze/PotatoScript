@@ -11,13 +11,13 @@ $.getScript('https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.
         var css = {};
         var next_move = "expand";
         if (this.next_move == "expand") {
-            css = { width: '200px' };
+            css = { width: '273px' };
             this.next_move = "shrink";            
         } else {
             css = { width: '50px' };
             this.next_move = "expand";
         }
-        $(this).animate(css, 200);
+        $(this).animate(css, 273);
     });   
   /*
     $("#phbox").click(function(){
