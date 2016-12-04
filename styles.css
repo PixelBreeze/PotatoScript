@@ -19,6 +19,7 @@
     left: 0;
     right: 0;
     bottom: 0;
+    cursor: pointer;
 }
 #phbox {
     height: 50px;
@@ -38,9 +39,9 @@
     width: 90px;
     height: 50px;
     cursor: pointer;
-    border-bottom: 1px solid black;
-    border-right: 1px solid black;
-    color: black;
+    border-bottom: 1px solid #6900ff;
+    border-right: 1px solid #6900ff;
+    color: #8f41ff;
     float: left;
     text-align: center;
     line-height: 50px;
