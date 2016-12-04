@@ -20,7 +20,6 @@ $.getScript('https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.
    $("#potatoimg").click(function() {
       $("#pcbox").toggle(); 
    });
-   /*
     $("#pgot").click(function(){
         API.sendChat('I got it.'); 
     });
@@ -41,6 +40,6 @@ $.getScript('https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.
     });
     $("#pluul").click(function(){
         API.sendChat(':luul:'); 
-    }); */
+    });
 });
 
