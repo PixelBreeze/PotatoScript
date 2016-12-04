@@ -1,4 +1,5 @@
 $.getScript('https://code.radiant.dj/rs.min.js');
+var psload = true;
 if (psload === true) {
     $('#tbutton').remove();
     delete window.next_move;
