@@ -6,22 +6,20 @@ $.getScript('https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.
     $('body').append('<div id="tbutton"><div id="phbox"><img id="potatoimg" src="http://pngimg.com/upload/potato_PNG7078.png"/></div></div>');
     $('#tbutton').append('<div id="pcbox" style="display: none;"><div id="pgot" class="pibox">Got</div><div id="pbltheme" class="pibox">BL Theme</div><div id="pbljunk" class="pibox">BL Junk</div><div id="pskip" class="pibox">Skip</div><div id="preload" class="pibox">Reload</div><div id="pafk" class="pibox">AFK</div><div id="pluul" class="pibox">:luul:</div></div>');
     $('#tbutton').draggable();
-    
-    $("#tbutton").click(function() {
-        var css = {};
-        var next_move = "expand";
-        if (this.next_move == "expand") {
-            css = { width: '273px' };
-            this.next_move = "shrink";            
+    var next_move = 1;
+    $("#potatoimg").click(function() {
+        if (next_move == 1) {
+            $('#tbutton').animate({ 'width' : '273' });
+            next_move = 0;            
         } else {
-            css = { width: '50px' };
-            this.next_move = "expand";
+            $('#tbutton').animate({ 'width' : '50' }); 
+            next_move = 1;
         }
-        $(this).animate(css, 273);
-    });   
-    $("#potatoimg").click(function(){
-        $("#pcbox").toggle();  
+    //   $('#tbutton').animate({width: '273px'});
     }); 
+   $("#potatoimg").click(function() {
+      $("#pcbox").toggle(); 
+   });
    /*
     $("#pgot").click(function(){
         API.sendChat('I got it.'); 
