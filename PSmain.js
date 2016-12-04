@@ -33,7 +33,7 @@ $.getScript('https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.
         API.sendChat('!bl junk'); 
     });
     $("#preload").click(function(){
-        API.sendChat('/relaod'); 
+        API.chatCommand('/reload'); 
     });
     $("#pafk").click(function(){
         API.sendChat('!afk'); 
