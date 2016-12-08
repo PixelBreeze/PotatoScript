@@ -46,3 +46,22 @@
 .pibox:hover {
     background-color: rgba(45, 27, 97, 0.9) !important;
 }
+#confirmbox {
+    width: 500px;
+    height: 300px;
+    background: gray;
+}
+#confirmheader {
+    Background: darkgray;
+    width: 100%;
+    height: 50px;
+}
+.cbox {
+    height: 50px;
+    width: 100px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+.cbox:hover {
+    background: lightblue;
+}
