@@ -3,12 +3,12 @@ $('head').append('<link id="pscss" rel="stylesheet" href="https://rawgit.com/Pix
 $.getScript('https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js').done(function(data) {
    
     $('body').append('<div id="tbutton"><div id="phbox"><img id="potatoimg" src="http://pngimg.com/upload/potato_PNG7078.png"/></div></div>');
-    $('#tbutton').append('<div id="pcbox" style="display: none;"><div id="pgot" class="pibox">Got</div><div id="pbltheme" class="pibox">BL Theme</div><div id="pbljunk" class="pibox">BL Junk</div><div id="pskip" class="pibox">Skip</div><div id="preload" class="pibox">Reload</div><div id="pafk" class="pibox">AFK</div><div id="pluul" class="pibox">:luul:</div><div id="p420" class="pibox">420</div></div>');
+    $('#tbutton').append('<div id="pcbox" style="display: none;"><div id="pgot" class="pibox">Got</div><div id="pbltheme" class="pibox">BL Theme</div><div id="pbljunk" class="pibox">BL Junk</div><div id="pblop" class="pibox">BL OP</div><div id="pskip" class="pibox">Skip</div><div id="preload" class="pibox">Reload</div><div id="pafk" class="pibox">AFK</div><div id="pluul" class="pibox">:luul:</div><div id="p420" class="pibox">420</div></div>');
     $('#tbutton').draggable();
     $("#confirmbox").toggle();
     var next_move = 1;
     var confirmed = false;
-    var paction = 1;
+    var paction = " ";
     $("#potatoimg").click(function() {
         if (next_move == 1) {
             $('#tbutton').animate({ 'width' : '273' });
@@ -35,6 +35,9 @@ $.getScript('https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.
     $("#pbljunk").click(function(){
         paction = "junk"; 
     });
+    $("#pblop").click(function(){
+        paction = "op"; 
+    });
     $("#preload").click(function(){
         API.sendChat('/reload'); 
     });
@@ -42,15 +45,12 @@ $.getScript('https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.
         API.sendChat('!afk'); 
     });
     $("#pluul").click(function(){
-        paction = 1;      
+        paction = "luul";      
     });
    $("#p420").click(function(){
         API.sendChat('4:20'); 
     });
    function executepaction() {
-      console.log("Pactionfunc");
-      if (confirmed === true) {
-         console.log("passed confirm again");
          if (paction === "skip") {
             API.sendChat('!skip'); 
          }
@@ -60,16 +60,11 @@ $.getScript('https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.
          if (paction === "junk") {
             API.sendChat('!bljunk'); 
          }
-         if (paction === 1) {
-            API.sendChat(':luul:'); 
-         }
-      }
+      paction = "";
    }
    $(".pibox").click(function() {
       var confirmed = confirm("Are You Sure?");
-      console.log("Confirm ran");
       if (confirmed === true) {
-         console.log("TRUE False checked");
          executepaction();
       }
    });
