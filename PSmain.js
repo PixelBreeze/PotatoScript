@@ -45,7 +45,7 @@ $.getScript('https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.
         API.sendChat('!afk'); 
     });
     $("#pluul").click(function(){
-        paction = "luul";      
+        API.sendChat(':luul:'); 
     });
    $("#p420").click(function(){
         API.sendChat('4:20'); 
