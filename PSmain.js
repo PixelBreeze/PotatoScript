@@ -8,6 +8,7 @@ $.getScript('https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.
     $("#confirmbox").toggle();
     var next_move = 1;
     var confirmed = false;
+    var paction = 1;
     $("#potatoimg").click(function() {
         if (next_move == 1) {
             $('#tbutton').animate({ 'width' : '273' });
@@ -17,10 +18,7 @@ $.getScript('https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.
             next_move = 1;
         }
     //   $('#tbutton').animate({width: '273px'});
-    }); 
-   $(".pibox").click(function() {
-      var confirmed = confirm("Are You Sure?");
-   });
+    });
    
    $("#potatoimg").click(function() {
       $("#pcbox").toggle(); 
@@ -29,13 +27,13 @@ $.getScript('https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.
         API.sendChat('I got it.'); 
     });
     $("#pskip").click(function(){
-         API.sendChat('!skip'); 
+        paction = "skip";
     });
     $("#pbltheme").click(function(){
-        API.sendChat('!bl theme'); 
+        paction = "theme";
     });
     $("#pbljunk").click(function(){
-        API.sendChat('!bl junk'); 
+        paction = "junk"; 
     });
     $("#preload").click(function(){
         API.sendChat('/reload'); 
@@ -44,10 +42,36 @@ $.getScript('https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.
         API.sendChat('!afk'); 
     });
     $("#pluul").click(function(){
-         API.sendChat(':luul:');      
+        paction = 1;      
     });
    $("#p420").click(function(){
         API.sendChat('4:20'); 
     });
+   function executepaction() {
+      console.log("Pactionfunc");
+      if (confirmed === true) {
+         console.log("passed confirm again");
+         if (paction === "skip") {
+            API.sendChat('!skip'); 
+         }
+         if (paction === "theme") {
+            API.sendChat('!bltheme'); 
+         }
+         if (paction === "junk") {
+            API.sendChat('!bljunk'); 
+         }
+         if (paction === 1) {
+            API.sendChat(':luul:'); 
+         }
+      }
+   }
+   $(".pibox").click(function() {
+      var confirmed = confirm("Are You Sure?");
+      console.log("Confirm ran");
+      if (confirmed === true) {
+         console.log("TRUE False checked");
+         executepaction();
+      }
+   });
 });
 
