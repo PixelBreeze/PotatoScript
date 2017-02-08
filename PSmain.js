@@ -6,16 +6,16 @@ $.getScript('https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.
     $('#psbutton').append('<div id="pcbox" style="display: none;"><div id="pgot" class="pibox">Got</div><div id="pbltheme" class="pibox pimportant">BL Theme</div><div id="pbljunk" class="pibox pimportant">BL Junk</div><div id="pblop" class="pibox pimportant">BL OP</div><div id="pskip" class="pibox pimportant">Skip</div><div id="preload" class="pibox">Reload</div><div id="pafk" class="pibox">AFK</div><div id="pluul" class="pibox">:luul:</div><div id="p420" class="pibox">420</div></div>');
     $('#psbutton').draggable();
     $("#confirmbox").toggle();
-    var next_move = 1;
-    var confirmed = false;
+    var pnext_move = 1;
+    var pconfirmed = false;
     var paction = " ";
     $("#potatoimg").click(function() {
-        if (next_move == 1) {
+        if (pnext_move == 1) {
             $('#psbutton').animate({ 'width' : '273' });
-            next_move = 0;            
+            pnext_move = 0;            
         } else {
             $('#psbutton').animate({ 'width' : '50' }); 
-            next_move = 1;
+            pnext_move = 1;
         }
     //   $('#tbutton').animate({width: '273px'});
     });
@@ -63,8 +63,8 @@ $.getScript('https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.
       paction = "";
    }
    $(".pibox.pimportant").click(function() {
-      var confirmed = confirm("Are You Sure?");
-      if (confirmed === true) {
+      var pconfirmed = confirm("Are You Sure?");
+      if (pconfirmed === true) {
          executepaction();
       }
    });
