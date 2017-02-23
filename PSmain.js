@@ -6,7 +6,7 @@ $('head').append('<link id="pscss" rel="stylesheet" href="https://rawgit.com/Pix
 //Draggable shit
 window.onload = addListeners();
 function addListeners(){
-    document.getElementById('psbutton').addEventListener('mousedown', mouseDown, false);
+    document.getElementById('phbox').addEventListener('mousedown', mouseDown, false);
     window.addEventListener('mouseup', mouseUp, false);
 }
 function mouseUp()
