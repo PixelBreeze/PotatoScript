@@ -26,7 +26,7 @@ function divMove(e){
     $("#confirmbox").toggle();
     var pnext_move = 1;
     var pconfirmed = false;
-    var paction = " ";
+    var action = " ";
     $("#potatoimg").click(function() {
         if (pnext_move == 1) {
             $('#psbutton').animate({ 'width' : '273' });
@@ -45,16 +45,16 @@ function divMove(e){
         API.sendChat('I got it.'); 
     });
     $("#pskip").click(function(){
-        paction = "skip";
+        action = "skip";
     });
     $("#pbltheme").click(function(){
-        paction = "theme";
+        action = "theme";
     });
     $("#pbljunk").click(function(){
-        paction = "junk"; 
+        action = "junk"; 
     });
     $("#pblop").click(function(){
-        paction = "op"; 
+        action = "op"; 
     });
     $("#preload").click(function(){
         API.sendChat('/reload'); 
@@ -63,27 +63,27 @@ function divMove(e){
         API.sendChat('!afk'); 
     });
     $("#pluul").click(function(){
-        API.sendChat(':luul:'); 
+        API.sendChat(':lul:'); 
     });
    $("#p420").click(function(){
         API.sendChat('4:20'); 
     });
-   function executepaction() {
-         if (paction === "skip") {
+   function executeaction() {
+         if (action === "skip") {
             API.sendChat('!skip'); 
          }
-         if (paction === "theme") {
-            API.sendChat('!bltheme'); 
+         if (action === "theme") {
+            API.sendChat('!bl theme'); 
          }
-         if (paction === "junk") {
-            API.sendChat('!bljunk'); 
+         if (action === "junk") {
+            API.sendChat('!bl junk'); 
          }
-      paction = "";
+      action = "";
    }
    $(".pibox.pimportant").click(function() {
       var pconfirmed = confirm("Are You Sure?");
       if (pconfirmed === true) {
-         executepaction();
+         executeaction();
       }
    });
 
