@@ -1,6 +1,6 @@
 //Potato Script
 $('head').append('<link id="pscss" rel="stylesheet" href="https://rawgit.com/PixelBreeze/PotatoScript/master/styles.css" type="text/css"/>');
-    $('body').append('<div id="psbutton" style="position: absolute; top: 77px; left: 1164px; width: 50px;"><div id="phbox"><img id="potatoimg" src="http://pngimg.com/upload/potato_PNG7078.png"/></div></div>');
+    $('body').append('<div id="psbutton" style="position: absolute; top: 77px; left: 1164px; width: 50px;"><div id="phbox"><img id="potatoimg" src="http://pngimg.com/uploads/potato/potato_PNG7078.png"/></div></div>');
     $('#psbutton').append('<div id="pcbox" style="display: none;"><div id="pgot" class="pibox">Got</div><div id="pbltheme" class="pibox pimportant">BL Theme</div><div id="pbljunk" class="pibox pimportant">BL Junk</div><div id="pblop" class="pibox pimportant">BL OP</div><div id="pskip" class="pibox pimportant">Skip</div><div id="preload" class="pibox">Reload</div><div id="pafk" class="pibox">AFK</div><div id="pluul" class="pibox">:luul:</div><div id="p420" class="pibox">420</div></div>');
     $("#confirmbox").toggle();
 //Draggable shit
