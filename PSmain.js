@@ -1,7 +1,7 @@
 //Potato Script
 $('head').append('<link id="pscss" rel="stylesheet" href="https://rawgit.com/PixelBreeze/PotatoScript/master/styles.css" type="text/css"/>');
     $('body').append('<div id="psbutton" style="position: absolute; top: 77px; left: 1164px; width: 50px;"><div id="phbox"><img id="potatoimg" src="http://pngimg.com/uploads/potato/potato_PNG7078.png"/></div></div>');
-    $('#psbutton').append('<div id="pcbox" style="display: none;"><div id="pgot" class="pibox">Got</div><div id="pbltheme" class="pibox pimportant">BL Theme</div><div id="pbljunk" class="pibox pimportant">BL Junk</div><div id="pblop" class="pibox pimportant">BL OP</div><div id="pskip" class="pibox pimportant">Skip</div><div id="preload" class="pibox">Reload</div></div>');
+    $('#psbutton').append('<div id="pcbox" style="display: none;"><div id="pgot" class="pibox">Got</div><div id="phistory" class="pibox">History</div><div id="pbltheme" class="pibox pimportant">BL Theme</div><div id="pbljunk" class="pibox pimportant">BL Junk</div><div id="pblop" class="pibox pimportant">BL OP</div><div id="pskip" class="pibox pimportant">Skip</div><div id="preload" class="pibox">Reload</div></div>');
     $("#confirmbox").toggle();
 //Draggable shit
 window.onload = addListeners();
@@ -44,6 +44,9 @@ function divMove(e){
     $("#pgot").click(function(){
         API.sendChat('I got it.'); 
     });
+    $("#phistory").click(function(){
+        action = "history";
+    });
     $("#pskip").click(function(){
         action = "skip";
     });
@@ -68,6 +71,10 @@ function divMove(e){
          }
          if (action === "junk") {
             API.sendChat('!bl junk'); 
+         }
+         if (action === "history") {
+            API.sendChat('!skip'); 
+            API.sendChat('Song in History');
          }
       action = "";
    }
